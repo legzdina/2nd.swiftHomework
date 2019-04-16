@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mans" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a7f-xR-iS5">
+                                <rect key="frame" x="90" y="410" width="245" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="60" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePu-T0-VfM">
+                                <rect key="frame" x="37" y="187" width="353" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="fw4-6n-CS3"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="572800583.16379297">
+                                    <!--2019-02-25 15:16:23 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="570081600">
+                                    <!--2019-01-25 04:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="lv"/>
+                                <connections>
+                                    <action selector="datetimePic:" destination="BYZ-38-t0r" eventType="valueChanged" id="giH-ES-gSk"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ievadiet pārbaudāmā laika parametrus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsF-gU-JPv">
+                                <rect key="frame" x="22" y="106" width="276" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYf-dm-9qZ">
+                                <rect key="frame" x="22" y="74" width="372" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.30713578345070425" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ePu-T0-VfM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="1bW-11-TmD"/>
+                            <constraint firstItem="YsF-gU-JPv" firstAttribute="top" secondItem="pYf-dm-9qZ" secondAttribute="bottom" constant="35" id="4Ao-RT-RCa"/>
+                            <constraint firstItem="pYf-dm-9qZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="8ww-uc-hTW"/>
+                            <constraint firstItem="pYf-dm-9qZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RL4-yL-FDF"/>
+                            <constraint firstItem="pYf-dm-9qZ" firstAttribute="leading" secondItem="YsF-gU-JPv" secondAttribute="leading" id="dW5-au-XwM"/>
+                            <constraint firstItem="pYf-dm-9qZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="fBy-rd-5cg"/>
+                            <constraint firstItem="ePu-T0-VfM" firstAttribute="top" secondItem="pYf-dm-9qZ" secondAttribute="bottom" constant="79" id="t3h-dK-s7h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ePu-T0-VfM" secondAttribute="trailing" constant="24" id="y71-hQ-kW8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="Smtg" destination="pYf-dm-9qZ" id="CJL-Se-Mkv"/>
+                        <outlet property="datetimePic" destination="ePu-T0-VfM" id="6xl-XK-CV0"/>
+                        <outlet property="lblLabrit" destination="YsF-gU-JPv" id="uTI-dX-YM5"/>
+                        <outlet property="viewBus" destination="a7f-xR-iS5" id="0bB-Y2-bUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="130.98591549295776"/>
+        </scene>
+    </scenes>
+</document>
